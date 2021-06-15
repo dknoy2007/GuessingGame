@@ -44,7 +44,7 @@ namespace GuessingGame.Models.GameFlow
 
                 Console.WriteLine("\nAll players are on board, lets play!\n");
 
-                await Task.Delay(1000);
+                await Task.Delay(100);
 
                 var game = new Game.GuessingGame(getPlayersResult.Players);
 
@@ -57,6 +57,10 @@ namespace GuessingGame.Models.GameFlow
                 Console.WriteLine("\nGreat game!\n");
 
                 DisplayGameMessage();
+
+                Console.WriteLine("\nGoodbye and have a nice day!");
+
+                await Task.Delay(1000);
             }
             while (GameStage == GameStage.Start);
         }
